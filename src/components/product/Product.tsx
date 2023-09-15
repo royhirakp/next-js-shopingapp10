@@ -18,7 +18,6 @@ import {
 } from "../../components/muielements/GlobalButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
-import RadioButtons from "./parts/RadioButton";
 import Ratting from "../home/parts/Ratting";
 
 const Product = () => {
