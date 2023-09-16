@@ -7,8 +7,11 @@ import {
   NewButton,
   NewTypography,
 } from "../../components/muielements/GlobalButton";
+import { useSelector } from "react-redux";
 
 const Ligin = () => {
+  // const data = useSelector((s) => s);
+  // console.log("data=login====", data);
   return (
     <Paper
       elevation={3}

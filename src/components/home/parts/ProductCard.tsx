@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
@@ -8,11 +9,18 @@ import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import Ratting from "./Ratting";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "@/redux/slices/cartSlices";
 
 import { Button, Stack } from "@mui/material";
-const ProductCard = () => {
+interface ProductProps {
+  id: number;
+  name: string;
+  reviewData: number;
+  detailes: string;
+  imageUrl: string;
+}
+const ProductCard: React.FC<ProductProps> = (props) => {
   return (
     <Card
       sx={{
@@ -34,9 +42,9 @@ const ProductCard = () => {
         // width="5%"
         sx={{ borderRadius: "5%" }}
       />
-      <TextBox />
+      <TextBox name={props.name} detailes={props.detailes} />
 
-      <Ratting rate={4.5} count={"12"} />
+      <Ratting rate={props.reviewData} count={"12"} />
       <CardAction />
       <ButtonContainer />
     </Card>
@@ -44,8 +52,11 @@ const ProductCard = () => {
 };
 
 export default ProductCard;
-
-const TextBox = () => {
+interface textDta {
+  name: string;
+  detailes: string;
+}
+const TextBox: React.FC<textDta> = (props) => {
   return (
     <CardContent sx={{ padding: "0" }}>
       <Typography
@@ -60,7 +71,7 @@ const TextBox = () => {
         variant="body2"
         color="text.secondary"
       >
-        Product name with details
+        {props.name}
       </Typography>
 
       <Typography
@@ -75,7 +86,7 @@ const TextBox = () => {
         variant="body2"
         color="text.secondary"
       >
-        producr color
+        {props.detailes}
       </Typography>
     </CardContent>
   );
@@ -101,6 +112,8 @@ const CardAction = () => {
 
 const ButtonContainer = () => {
   const dispatch = useDispatch();
+  const data = useSelector((s) => s);
+  console.log("data produt card=====", data);
   return (
     <Stack justifyContent="center">
       <Button

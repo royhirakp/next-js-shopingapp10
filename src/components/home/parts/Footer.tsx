@@ -4,6 +4,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { useSelector } from "react-redux";
 const footerData = [
   {
     title: "Company",
@@ -28,6 +29,8 @@ const footerData = [
   // },
 ];
 const Footer = () => {
+  // const data = useSelector((s) => s);
+  // console.log("data=====", data);
   return (
     <Box
       sx={{

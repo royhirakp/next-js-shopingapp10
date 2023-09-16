@@ -5,7 +5,10 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { typoText } from "@/components/muielements/stylesWithBP";
+import { useSelector } from "react-redux";
 const ButtonList = () => {
+  // const data = useSelector((s) => s);
+  // console.log("data=====", data);
   return (
     <>
       <Typography

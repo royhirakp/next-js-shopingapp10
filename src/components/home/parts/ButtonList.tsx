@@ -46,19 +46,6 @@ const ButtonList = () => {
           );
         }
       )}
-
-      {/* <NewButton sx={{ borderBottom: "2px solid" }} variant="text">
-        Books
-      </NewButton>
-      <NewButton sx={{ borderBottom: "2px solid" }} variant="text">
-        grocery
-      </NewButton>
-      <NewButton sx={{ borderBottom: "2px solid" }} variant="text">
-        Home appliences
-      </NewButton>
-      <NewButton sx={{ borderBottom: "2px solid" }} variant="text">
-        Flights
-      </NewButton>{" "} */}
     </Stack>
   );
 };

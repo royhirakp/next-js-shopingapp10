@@ -1,7 +1,10 @@
+"use clinet";
+
 import { Paper } from "@mui/material";
 import React from "react";
 import SingupForm from "./parts/SingupForm";
 import ButtonList from "../Login/parts/ButtonList";
+import { useSelector } from "react-redux";
 
 const Singup = () => {
   return (

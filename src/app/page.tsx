@@ -13,7 +13,7 @@ export default function Home() {
         height: "100%",
       }}
     >
-      <Login />
+      {/* <Login /> */}
     </Box>
   );
 }

@@ -27,6 +27,7 @@ import {
 import { LoginFormAvtar } from "@/components/muielements/stylesWithBP";
 
 import Drawar from "./Drawar";
+import { useSelector } from "react-redux";
 interface MenuButtonAndLoGoProps {
   handelFunction: () => void; // Define the type of the handleFunction prop
 }
@@ -163,9 +164,13 @@ const MenuButtonAndLoGo: React.FC<MenuButtonAndLoGoProps> = ({
 };
 
 const Header = () => {
+  const router = useRouter();
   const [open, setOpen] = React.useState<
     "top" | "left" | "bottom" | "right" | null
   >(null);
+
+  // const data = useSelector((s) => s);
+  // console.log("data header compoent=====", data);
   return (
     <AppBar
       position="static"
@@ -215,6 +220,10 @@ const Header = () => {
         </Drawar>
         <Box>
           <Typography
+            onClick={() => {
+              // console.log("working DAAAAAAAAAAAA");
+              router.push("/home");
+            }}
             variant="h6"
             sx={{ ...typoHeading1, display: { xs: "none", sm: "block" } }}
           >

@@ -18,7 +18,11 @@ const buttonStyle = {
   },
   marginLeft: "5%",
 };
-const CartCard = () => {
+
+interface propsData {
+  item: any;
+}
+const CartCard: React.FC<propsData> = ({ item }) => {
   return (
     <Card
       sx={{
